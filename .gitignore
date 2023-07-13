@@ -4,5 +4,3 @@ __pycache__
 .env.prod
 firebase_service_account_key.dev.json
 firebase_service_account_key.prod.json
-google_application_credentials.dev.json
-google_application_credentials.prod.json
