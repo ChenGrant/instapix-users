@@ -3,4 +3,3 @@ __pycache__
 .env.dev
 .env.dockerdev
 firebase_service_account_key.dev.json
-firebase_service_account_key.prod.json
