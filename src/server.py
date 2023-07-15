@@ -12,7 +12,8 @@ import user_pb2_grpc
 def start():
     server = grpc.server(futures.ThreadPoolExecutor())
     user_pb2_grpc.add_UserServicer_to_server(User(), server)
-    server.add_insecure_port(f"{os.environ['DOMAIN']}:{os.environ['PORT']}")
-    print("starting user server")
+    address = f"0.0.0.0:{os.environ['PORT']}"
+    server.add_insecure_port(address)
+    print(f"starting user server on {address}")
     server.start()
     server.wait_for_termination()
